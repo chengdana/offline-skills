@@ -9,6 +9,20 @@ description: Solve Alita-style coding challenges where the user must upload a su
 
 Produce a valid `submission.json` for code challenges that grade by applying a model patch. Prioritize a clean, minimal unified diff that `git apply` accepts.
 
+## Superpowers Orchestration
+
+Treat this skill as a task-specific wrapper around the relevant superpowers, not as a replacement for them.
+
+Use this sequence:
+
+1. Use `superpowers:systematic-debugging` when the challenge behavior is unclear, a test fails, or platform logs show `apply_model_patch`, `corrupt patch`, `patch does not apply`, or hidden-test failures. First classify the failure as prompt understanding, source behavior, environment, or patch-format.
+2. Use `superpowers:test-driven-development` before changing source behavior when a runnable local test or minimal reproduction is feasible. Watch the narrow test fail for the expected reason, then make the smallest source change.
+3. Use this skill's `Diff Rules`, `Required Validation`, and platform-log triage to build and debug `submission.json`.
+4. Use `superpowers:verification-before-completion` before telling the user to upload. Freshly validate JSON, patch applicability, and any available tests.
+5. Use `skill-auto-update` only after real usage feedback shows this skill missed a trigger, ordered the workflow poorly, or lacked a recurring domain-specific check.
+
+Do not copy large sections from the superpowers into this skill. Keep this file focused on Alita patch-submission details: challenge triage, diff construction, patch validation, and common grader-log meanings.
+
 ## Workflow
 
 1. Read the prompt, screenshot, README, existing `submission.json`, and nearby tests before editing.
