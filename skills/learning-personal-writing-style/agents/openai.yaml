@@ -1,0 +1,4 @@
+interface:
+  display_name: "个人风格学习"
+  short_description: "从样稿、改稿和范文中沉淀个人写作风格"
+  default_prompt: "Use $learning-personal-writing-style to analyze my sample articles and build a reusable writing style profile."
