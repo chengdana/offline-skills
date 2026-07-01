@@ -2,6 +2,7 @@
 
 ## User Skills
 
+- `alita-patch-submission`
 - `brand-guidelines`
 - `docx`
 - `financial-analysis-expert`
