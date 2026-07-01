@@ -1,0 +1,4 @@
+interface:
+  display_name: "Alita Patch Submission"
+  short_description: "Solve code patch challenges that require submission.json."
+  default_prompt: "Use this skill to solve an Alita-style code challenge and produce a valid submission.json diff."
