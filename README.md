@@ -20,6 +20,13 @@
 
 ## 安装
 
+先拉取仓库：
+
+```bash
+git clone https://github.com/chengdana/offline-skills.git
+cd offline-skills
+```
+
 Windows PowerShell:
 
 ```powershell
